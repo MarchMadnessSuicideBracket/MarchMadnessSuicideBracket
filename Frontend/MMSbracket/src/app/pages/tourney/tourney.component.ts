@@ -134,8 +134,19 @@ pickForm = this.fb.group({
 
   makePick(){
 
-        this.tService.makePicks(this.currentTPlayer.tpid,this.teamForPick.teamId, this.gameForPick.gameId, this.dayOfTourney).subscribe(data => console.log(data),err => console.log(err))
-        window.location.reload();
+        if(Date.now()< new Date(this.gameForPick.date+"T"+this.gameForPick.time).getTime()){
+          this.tService.makePicks(this.currentTPlayer.tpid,this.teamForPick.teamId, this.gameForPick.gameId, this.dayOfTourney).subscribe(data => console.log(data),err => console.log(err))
+
+          setTimeout(()=>{
+            window.location.reload();
+          },800)
+
+        }
+        else{
+          alert("Game is already in progress.")
+        }
+
+
 
 
   }

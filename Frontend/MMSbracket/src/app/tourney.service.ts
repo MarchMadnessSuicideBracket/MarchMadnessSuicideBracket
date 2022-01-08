@@ -9,7 +9,7 @@ import { CurrentUser, Player } from './interfaces/auth';
 })
 export class TourneyService {
 
-  url = "http://localhost:5000/api/v1";
+  url = "http://marchmadnesssurvivorpool2-env.eba-smc268nu.us-east-2.elasticbeanstalk.com/api/v1";
 
   private httpOptions ={
     headers: new HttpHeaders().set("Authorization",<string> localStorage.getItem("JWT"))

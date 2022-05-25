@@ -59,7 +59,7 @@ setTimeout(()=>{
 
     this.logInToApp();
   }, error => console.log(error))
-},1000)
+},1200)
 
   }
 

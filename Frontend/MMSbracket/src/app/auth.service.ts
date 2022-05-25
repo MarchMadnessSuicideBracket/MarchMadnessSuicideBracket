@@ -9,12 +9,12 @@ import { retry , catchError} from "rxjs/operators"
 })
 export class AuthService {
 
-  url = "http://marchmadnesssurvivorpool2-env.eba-smc268nu.us-east-2.elasticbeanstalk.com/api/v1";
+  url = "https://marchmadnesssurvivorpool2-env.eba-smc268nu.us-east-2.elasticbeanstalk.com/api/v1";
 
   constructor(private client: HttpClient ) { }
 
   handleError(error: HttpErrorResponse) {
-    if (error.status == 500 && error.url === "http://marchmadnesssurvivorpool2-env.eba-smc268nu.us-east-2.elasticbeanstalk.com/api/v1/login"){
+    if (error.status == 500 && error.url === "https://marchmadnesssurvivorpool2-env.eba-smc268nu.us-east-2.elasticbeanstalk.com/api/v1/login"){
       alert("Login Failed!");
       return throwError(() => error);
     } else {

@@ -37,7 +37,7 @@ export class ManageTourneyComponent implements OnInit {
       console.log(this.tourneyId)
       this.tService.addTPtoTourney(this.newPlayer.playerId, this.tourneyId).subscribe(data => {
         console.log(data);
-        window.location.reload();
+    
       }, error => {
         console.log(error)
         alert("Cannot find a user with that username.");

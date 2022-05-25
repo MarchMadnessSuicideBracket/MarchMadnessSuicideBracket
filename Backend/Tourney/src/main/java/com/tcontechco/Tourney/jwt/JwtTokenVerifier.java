@@ -36,6 +36,18 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException{
+        System.out.println("address:");
+        System.out.println(request.getRemoteAddr());
+        System.out.println("host:");
+        System.out.println(request.getRemoteHost());
+        System.out.println("user: ");
+        System.out.println(request.getRemoteUser());
+        System.out.println("port:");
+        System.out.println(request.getRemotePort());
+        System.out.println("local:");
+        System.out.println(request.getLocalAddr());
+
+
         String authorizationHeader = request.getHeader(jwtConfig.getAuthorizationHeader());
         if(Strings.isNullOrEmpty(authorizationHeader) || !authorizationHeader.startsWith(jwtConfig.getTokenPrefix())){
             filterChain.doFilter(request,response);

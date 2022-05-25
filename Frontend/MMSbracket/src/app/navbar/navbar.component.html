@@ -2,24 +2,24 @@
   <nav class="navbar navbar-light bg-light ">
       <a class="navbar-brand" routerLink="/">SurvivorPool</a>
       <ul class="nav">
-          <li class="nav-item mr-5"><a class="nav-link">Tournament</a></li>
+          <li class="nav-item mr-5"><a class="nav-link">2022 Tournament</a></li>
           <li class="nav-item mr-5"><a class="nav-link">{{username}}</a></li>
           <li *ngIf="ifTcon()" class="nav-item mr-5"><a class="nav-link">Admin</a></li>
           <li class="nav-item"><button (click)="appLogOut()">logout</button></li>
-    
+
       </ul>
 
   </nav>
 </span>
 <ng-template #elseBlock>
     <nav class="navbar navbar-light bg-light ">
-        <a class="navbar-brand">SurvivorPool</a> 
+        <a class="navbar-brand">SurvivorPool</a>
         <ul class="nav">
-            <li class="nav-item mr-5"><a class="nav-link">Tournament</a></li>
-           
+            <li class="nav-item mr-5"><a class="nav-link">2022 Tournament</a></li>
+
             <li class="nav-item"><a class="nav-link"><button routerLink="/">login</button></a></li>
-      
-        </ul> 
+
+        </ul>
 
     </nav>
 </ng-template>
